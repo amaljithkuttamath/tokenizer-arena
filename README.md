@@ -69,6 +69,21 @@ tokenizer-arena --json "Hello, world!"
 | GPT-3, Codex | p50k_base | 50K tokens |
 | GPT-3 (legacy) | r50k_base | 50K tokens |
 
+## Results
+
+See [RESULTS.md](RESULTS.md) for detailed benchmark comparisons across English prose, Python code, JSON, and multilingual text. The short version: newer tokenizers (cl100k, o200k) are universally more efficient, with the biggest gains on code (1.8x fewer tokens than r50k) and multilingual text (2x fewer tokens with o200k).
+
+## Benchmarks
+
+CI runs benchmarks on every push using four input categories (English prose, Python code, JSON, multilingual). Results are uploaded as GitHub Actions artifacts. You can also run them locally:
+
+```bash
+cargo build --release
+./benchmarks/run_benchmarks.sh
+```
+
+Results are saved to `benchmarks/results/` as markdown tables.
+
 ## Why This Exists
 
 Token counts directly affect cost, latency, and context window usage when working with LLMs. Different tokenizers handle the same text very differently, especially for code, multilingual text, and structured data. This tool makes those differences visible so you can make informed decisions about which model to use for your workload.

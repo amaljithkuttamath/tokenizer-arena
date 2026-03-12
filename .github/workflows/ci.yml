@@ -20,4 +20,14 @@ jobs:
       - uses: Swatinem/rust-cache@v2
       - run: cargo clippy -- -D warnings
       - run: cargo build --release
-      - run: cargo test
+      - name: Run tests
+        run: cargo test --verbose
+      - name: Run benchmarks
+        run: |
+          chmod +x benchmarks/run_benchmarks.sh
+          ./benchmarks/run_benchmarks.sh
+      - name: Upload benchmark results
+        uses: actions/upload-artifact@v4
+        with:
+          name: benchmark-results
+          path: benchmarks/results/

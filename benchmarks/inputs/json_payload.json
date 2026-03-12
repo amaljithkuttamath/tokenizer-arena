@@ -1,0 +1,27 @@
+{
+  "model": "gpt-4",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful assistant that answers questions about machine learning."
+    },
+    {
+      "role": "user",
+      "content": "Explain the difference between BERT and GPT architectures."
+    }
+  ],
+  "temperature": 0.7,
+  "max_tokens": 1024,
+  "top_p": 0.95,
+  "frequency_penalty": 0.0,
+  "presence_penalty": 0.0,
+  "response_format": {
+    "type": "json_object"
+  },
+  "metadata": {
+    "request_id": "req_abc123",
+    "user_id": "user_456",
+    "session": "sess_789",
+    "tags": ["ml", "architecture", "comparison"]
+  }
+}

@@ -1,0 +1,5 @@
+Hello, world! This is a test of multilingual tokenization.
+Chinese: 大语言模型正在改变世界
+Japanese: トランスフォーマーは自然言語処理を革新しました
+Arabic: نماذج اللغة الكبيرة تغير العالم
+Emoji: 🚀🤖💡🌍✨ The future of AI is here.
