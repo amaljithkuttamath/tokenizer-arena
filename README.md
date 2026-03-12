@@ -1,3 +1,6 @@
+[![CI](https://github.com/amaljithkuttamath/tokenizer-arena/actions/workflows/ci.yml/badge.svg)](https://github.com/amaljithkuttamath/tokenizer-arena/actions/workflows/ci.yml)
+[![Rust](https://img.shields.io/badge/rust-1.70%2B-orange.svg)](https://www.rust-lang.org/)
+
 # tokenizer-arena
 
 Compare how different LLM tokenizers handle the same input text.
